@@ -201,12 +201,12 @@ Node* searchNodebyValue(Node** head, int iValue)
 void deleteNodebyValue(Node** head, int iValue)
 {
     // Faz a busca do nó
-    Node* selected = searchNodebyValue(head, iValue);
+    Node* selected = searchNodebyValue(head, iValue); // Aqui usamos a implementação do exercício 3
 
     // Verifica se ele foi encontrado
     if (selected == nullptr) return;
 
     // Por fim, deleta o nó
-    deleteNode(head, selected);
+    deleteNode(head, selected); // Aqui usamos a função já implementada deleteNode
     return;
 }
