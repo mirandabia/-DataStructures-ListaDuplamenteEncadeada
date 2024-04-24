@@ -5,7 +5,7 @@ Repositório para a entrega da atividade de Estrutura de Dados (24/04)
 ## Integrantes
 
 - Sillas Rocha da Costa
-- Beatriz Miranda
+- Beatriz Miranda Bezerra
 
 # Atividade
 
@@ -82,4 +82,4 @@ Node* searchNodebyValue(Node** head, int iValue)
 }
 ```
 
-#### *Obs: Note que a implementação do exercício 3 foi realizada antes da implementação do exercício 2 em virtude da sua dependência, tanto da implementação do exercício 3 quando da implementação da função `deleteNode`, para que fosse evitada a repetição de código.*
+#### *Obs: Note que a implementação do exercício 3 foi realizada antes da implementação do exercício 2 em virtude da sua dependência, tanto da implementação do exercício 3 quanto da implementação da função `deleteNode`, para que fosse evitada a repetição de código.*
