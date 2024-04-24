@@ -169,3 +169,24 @@ void insertBefore(Node* ptrLocation, int iPayload) {
     }
     ptrLocation->ptrPrev = newNode; // Atualiza o anterior do ptrLocation para o novo nó
 }
+
+
+Node* searchNodebyValue(Node** head, int iValue)
+{
+    if (*head == nullptr)
+    {
+        cout << "Fila vazia, não foi possível achar o nó." << endl;
+        return nullptr;
+    }
+
+    Node* current = *head;
+    while (current != nullptr && current->iPayload != iValue) current = current->ptrNext;
+
+    if (current == nullptr)
+    {
+        cout << "Não foi possível achar o nó de valor " << iValue << "." << endl;
+        return nullptr;
+    }
+
+    return current;
+}
