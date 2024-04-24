@@ -170,34 +170,36 @@ void insertBefore(Node* ptrLocation, int iPayload) {
     ptrLocation->ptrPrev = newNode; // Atualiza o anterior do ptrLocation para o novo nó
 }
 
-
 Node* searchNodebyValue(Node** head, int iValue)
 {
+    // Verifica se a fila é vazia
     if (*head == nullptr)
     {
         cout << "Fila vazia, não foi possível achar o nó." << endl;
         return nullptr;
     }
-
+    // Percorre a lista até encontrar o nó procurado ou chegar ao fim da fila
     Node* current = *head;
     while (current != nullptr && current->iPayload != iValue) current = current->ptrNext;
-
+    // Verifica se não achou o nó na fila
     if (current == nullptr)
     {
         cout << "Não foi possível achar o nó de valor " << iValue << "." << endl;
         return nullptr;
     }
-
+    // Se já foi encontrado apenas o retorna
     return current;
 }
 
-
 void deleteNodebyValue(Node** head, int iValue)
 {
+    // Faz a busca do nó
     Node* selected = searchNodebyValue(head, iValue);
 
+    // Verifica se ele foi encontrado
     if (selected == nullptr) return;
 
+    // Por fim, deleta o nó
     deleteNode(head, selected);
     return;
 }
