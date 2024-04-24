@@ -190,3 +190,14 @@ Node* searchNodebyValue(Node** head, int iValue)
 
     return current;
 }
+
+
+void deleteNodebyValue(Node** head, int iValue)
+{
+    Node* selected = searchNodebyValue(head, iValue);
+
+    if (selected == nullptr) return;
+
+    deleteNode(head, selected);
+    return;
+}
