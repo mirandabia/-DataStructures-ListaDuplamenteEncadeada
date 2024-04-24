@@ -21,21 +21,28 @@ Node* searchNodebyValue(Node**, int);
 
 int main(){
     Node* head = nullptr;
-    displayList(head);
-    cout << "=================================" << endl;
+    // displayList(head);
+    // cout << "=================================" << endl;
     insertEnd(&head, 0);
     insertEnd(&head, 1);
     insertEnd(&head, 2);
     insertEnd(&head, 5);
     insertEnd(&head, 7);
     insertEnd(&head, 42);
-    displayList(head);   
-    // insertFront(&head->ptrNext, 13);
-    // displayList(head);  
+    displayList(head);
+    // insertFront(&head, 13);
+    // displayList(head);
     // deleteNode(&head, head->ptrNext->ptrNext);
-    // displayList(head); 
-    // insertAfter(head, 17);
-    // displayList(head); 
+    // displayList(head);
+    
+    // Como a função de busca e a de deletar o nó pelo valor funcionam em conjunto, apenas testando a de deletar já estamos testando a de busca
+    // Deste modo, testamos para o caso começo da fila, fim da fila, valor inválido e meio da fila.
+    deleteNodebyValue(&head, 42);
+    deleteNodebyValue(&head, 0);
+    deleteNodebyValue(&head, 45);
+    deleteNodebyValue(&head, 7);
+    displayList(head);
+
 }
 
 Node* createNode(int iPayload){
