@@ -29,18 +29,23 @@ int main(){
     insertEnd(&head, 5);
     insertEnd(&head, 7);
     insertEnd(&head, 42);
+    insertFront(&head, 13);
     displayList(head);
-    // insertFront(&head, 13);
-    // displayList(head);
-    // deleteNode(&head, head->ptrNext->ptrNext);
-    // displayList(head);
+    cout << "=================================" << endl;
+    cout << "Testando a função de deletar valores:" << endl;
     
     // Como a função de busca e a de deletar o nó pelo valor funcionam em conjunto, apenas testando a de deletar já estamos testando a de busca
     // Deste modo, testamos para o caso começo da fila, fim da fila, valor inválido e meio da fila.
     deleteNodebyValue(&head, 42);
-    deleteNodebyValue(&head, 0);
+    deleteNodebyValue(&head, 13);
     deleteNodebyValue(&head, 45);
     deleteNodebyValue(&head, 7);
+    displayList(head);
+    cout << "=================================" << endl;
+    cout << "Testando a função de achar valores e inserrir valores no meio da lista:" << endl;
+    Node* temp = searchNodebyValue(&head, 2);
+    insertBefore(temp, 13);
+    
     displayList(head);
 
 }
