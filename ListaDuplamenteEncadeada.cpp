@@ -42,7 +42,7 @@ int main(){
     deleteNodebyValue(&head, 7);
     displayList(head);
     cout << "=================================" << endl;
-    cout << "Testando a função de achar valores e inserrir valores no meio da lista:" << endl;
+    cout << "Testando a função de achar valores e inserir valores no meio da lista:" << endl;
     Node* temp = searchNodebyValue(&head, 2);
     insertBefore(temp, 13);
     
@@ -112,7 +112,7 @@ void insertEnd(Node** head, int iPayload){
     }
     Node* temp = (*head);
 
-    // Prercorremos a lista até seu fim (ptrNext do último nó é NULL)
+    // Percorremos a lista até seu fim (ptrNext do último nó é NULL)
     while(temp->ptrNext != nullptr) temp = temp->ptrNext;
 
     newNode->ptrPrev = temp; //newNode aponta para o fim da lista
